@@ -1,0 +1,36 @@
+					--postgreSQL setup steps--
+1. open command prompt
+2. run step-3 command to connect to postgres
+3. psql -U postgres
+4. Password for user postgres: (enter your postgres password and hit enter key(i.e. Admin for my setup))
+5. run step-6 command to get into postgres
+6. \c postgres
+7. create database using step-8 command
+8. CREATE DATABASE oozoutodo;
+9. to select database using step-10 command
+10. \c oozoutodo;
+11. create todo table using step-12 command
+12. CREATE TABLE Todo(todoid SERIAL PRIMARY KEY, title VARCHAR(500), todostatus varchar(100),created_at DATE);
+13. create subtask table using step-14 command
+14. CREATE TABLE Subtask(subtaskid SERIAL PRIMARY KEY,todoid INTEGER NOT NULL, subtasktitle VARCHAR(500), subtaskstatus varchar(100),created_at DATE);
+
+					--oozou-backend project setup--
+
+1. open oozou-backend in visual studio code (or any prefered IDE)
+2. open terminal/command prompt and navigate to the oozou-backend project folder
+3. run step-4 command on terminal/command prompt
+4. npm install
+5. change postgres password in db.js file with your password
+6. to run oozou-backend project using step-7 command
+7. node index
+
+					--oozou-todo-test client side project setup--
+
+1. open oozou-todo-test in visual studio code (or any prefered IDE)
+2. open terminal/command prompt and navigate to the oozou-todo-test project folder
+3. run step-4 command on terminal/command prompt
+4. npm install
+5. to run oozou-todo-test project using step-6 command
+6. npm start
+
+
